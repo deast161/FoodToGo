@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e27dccd8-f26c-43c6-8de0-8f8ab0e0a6e5" name="Changes" comment="Small update">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="e27dccd8-f26c-43c6-8de0-8f8ab0e0a6e5" name="Changes" comment="Delivery Status and Order Repo Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/repository/OrderRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/web/rest/CourierRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/web/rest/CourierRestController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,6 +83,9 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.FoodtoGo.web.rest" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Javier\revature.home.project2\FoodtoGo\src\main\java\com\example\FoodtoGo\web\" />
     </key>
@@ -136,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657477908593</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Delivery Status and Order Repo Update">
+      <created>1658264796694</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658264796694</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,6 +160,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Small update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small update" />
+    <MESSAGE value="Delivery Status and Order Repo Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delivery Status and Order Repo Update" />
   </component>
 </project>

@@ -1,17 +1,14 @@
 package com.example.FoodtoGo.web.rest;
 
-import com.example.FoodtoGo.entity.Consumer;
-import com.example.FoodtoGo.entity.Courier;
-import com.example.FoodtoGo.entity.Order;
-import com.example.FoodtoGo.entity.PaymentType;
+import com.example.FoodtoGo.entity.*;
 import com.example.FoodtoGo.repository.ConsumerRepository;
 import com.example.FoodtoGo.repository.CourierRepository;
 import com.example.FoodtoGo.repository.OrderRepository;
-import com.example.FoodtoGo.web.dto.ConsumerDto;
-import com.example.FoodtoGo.web.dto.CourierDto;
-import com.example.FoodtoGo.web.dto.HttpError;
-import com.example.FoodtoGo.web.dto.OrderDto;
+import com.example.FoodtoGo.web.dto.*;
+import lombok.RequiredArgsConstructor;
+import org.hibernate.engine.spi.Status;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.web.JsonPath;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +18,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
+
+@RequiredArgsConstructor
 @RestController
+@CrossOrigin("*")
 @RequestMapping(value="/api")
 public class CourierRestController {
     @Autowired
@@ -77,18 +77,19 @@ public class CourierRestController {
     public Iterable<Order> findByStatus(@PathVariable String statusOrder){
         return orderRepository.findByStatus(statusOrder);
     }
-/*
     @PatchMapping (
-            value = "/deliverystatus",
+            value = "{statusOrder}",
             produces = {
                     "application/json"
             }
     )
 
-    public List<Order> patch(@RequestBody UpdateDeliveryStatus request){
-
+    public ResponseEntity<?> patch(@RequestBody UpdateDeliveryStatus request){
+        Order order=orderRepository.findById(request.getId()).get();
+        order.setStatus(DeliveryStatus.valueOf(request.getStatus()));
+        order=orderRepository.save(order);
+        return ResponseEntity.status(HttpStatus.OK).body(order);
     }
-*/
 
 
 

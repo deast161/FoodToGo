@@ -1,6 +1,8 @@
 package com.example.FoodtoGo.entity;
 
 import lombok.*;
+import org.hibernate.engine.spi.Status;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -46,5 +48,7 @@ public class Order implements Serializable {
     @JoinColumn(name = "courier_id")
     private Courier courier;
 
-
 }
+
+
+
