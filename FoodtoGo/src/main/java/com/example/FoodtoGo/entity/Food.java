@@ -3,7 +3,6 @@ package com.example.FoodtoGo.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
-import com.example.FoodtoGo.entity.*;
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -27,6 +26,7 @@ public class Food implements Serializable {
     private double price;
     private String ingredients;
     private String Description;
+    private String imgPath;
 
     @JsonIgnore
     @ManyToOne
